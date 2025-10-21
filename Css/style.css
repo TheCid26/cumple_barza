@@ -1,0 +1,95 @@
+body {
+    background: linear-gradient(120deg, #004d98, #a50044);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 150px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #edbb00;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#mensaje {
+    font-size: 1.5em;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: aparecer 2s ease forwards;
+}
+
+.cursor {
+    display: inline-block;
+    background: #edbb00;
+    width: 3px;
+    margin-left: 3px;
+    animation: blink 0.8s infinite;
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
