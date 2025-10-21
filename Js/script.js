@@ -80,3 +80,35 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+
+window.addEventListener('DOMContentLoaded', function () {
+    const musica = document.getElementById('musica');
+
+    // Intenta reproducir automáticamente
+    const playPromise = musica.play();
+
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            // Si el navegador bloquea, muestra un botón o activa tras clic
+            const boton = document.createElement('button');
+            boton.textContent = '🎵 Reproducir música';
+            boton.style.position = 'fixed';
+            boton.style.bottom = '20px';
+            boton.style.left = '50%';
+            boton.style.transform = 'translateX(-50%)';
+            boton.style.padding = '12px 20px';
+            boton.style.background = '#edbb00';
+            boton.style.border = 'none';
+            boton.style.borderRadius = '10px';
+            boton.style.fontSize = '1.1em';
+            boton.style.cursor = 'pointer';
+            boton.style.zIndex = '1000';
+            document.body.appendChild(boton);
+
+            boton.addEventListener('click', () => {
+                musica.play();
+                boton.remove();
+            });
+        });
+    }
+});

@@ -57,6 +57,67 @@ h1 {
     z-index: 999;
 }
 
+/* 🔷 Contenedor que agrupa el mensaje y la imagen */
+.mensaje-con-imagen {
+    display: flex;
+    /* Activa modo horizontal: texto + imagen lado a lado */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+    align-items: flex-start;
+    /* Alinea ambos elementos desde la parte superior */
+    gap: 20px;
+    /* Espacio entre el texto y la imagen */
+    max-width: 900px;
+    /* Evita que se estire demasiado en pantallas grandes */
+    margin: 0 auto;
+    /* Centra el bloque en la pantalla */
+    flex-wrap: wrap;
+    /* Si no hay espacio, los elementos bajan (para móviles) */
+}
+
+/* 📜 Ajustes del bloque de texto (mensaje) dentro del flex */
+#mensaje {
+    flex: 1 1 55%;
+    /* Ocupa alrededor del 55% del espacio del contenedor */
+    text-align: justify;
+    /* Alinea el texto de forma elegante */
+}
+
+/* 🖼️ Imagen del lado derecho */
+.imagen-derecha {
+    flex: 1 1 35%;
+    /* Ocupa alrededor del 35% del espacio del contenedor */
+    max-width: 300px;
+    /* Tamaño máximo en pantallas grandes */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    /* Sombra suave */
+    object-fit: cover;
+    /* Evita deformación al ajustar el tamaño */
+    animation: aparecer 2s ease forwards;
+    /* Usa tu animación existente */
+}
+
+/* 📱 Adaptación para móviles: texto arriba, imagen abajo */
+@media (max-width: 600px) {
+    .mensaje-con-imagen {
+        flex-direction: column;
+        /* Coloca texto e imagen en columna (uno debajo del otro) */
+        align-items: center;
+        /* Centra los elementos */
+    }
+
+    .imagen-derecha {
+        width: 80%;
+        /* Imagen más grande en móviles */
+        max-width: 250px;
+        margin-top: 15px;
+        /* Espacio entre texto e imagen */
+    }
+}
+
+
 @keyframes blink {
 
     0%,

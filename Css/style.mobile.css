@@ -68,6 +68,77 @@ h1 {
     z-index: 999;
 }
 
+/* ====== Bloque del mensaje con imagen ====== */
+.mensaje-con-imagen {
+    display: flex;
+    /* Pone texto e imagen en una misma línea (flexbox) */
+    flex-direction: column;
+    /* En móviles, coloca texto arriba e imagen abajo */
+    align-items: center;
+    /* Centra horizontalmente ambos elementos */
+    justify-content: center;
+    /* Centra verticalmente en el contenedor */
+    gap: 15px;
+    /* Espacio entre el texto y la imagen */
+    margin-top: 15px;
+    /* Espacio superior respecto al título */
+}
+
+/* 📜 Mensaje dentro del bloque */
+#mensaje {
+    width: 90%;
+    /* El texto ocupa casi todo el ancho */
+    font-size: 1.1em;
+    /* Tamaño de letra cómodo en móviles */
+    text-align: justify;
+    /* Alinea el texto para que se vea ordenado */
+}
+
+/* 🖼️ Imagen ubicada debajo del texto en móviles */
+.imagen-derecha {
+    width: 80%;
+    /* Ocupa gran parte del ancho sin desbordar */
+    max-width: 250px;
+    /* Limita el tamaño máximo de la imagen */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    /* Sombra sutil */
+    object-fit: cover;
+    /* Mantiene la proporción sin deformarse */
+    animation: aparecer 2s ease forwards;
+    /* Usa tu animación de entrada */
+}
+
+/* ====== Para pantallas un poco más grandes (tablets horizontales) ====== */
+@media (min-width: 700px) {
+    .mensaje-con-imagen {
+        flex-direction: row;
+        /* Coloca texto e imagen lado a lado */
+        align-items: flex-start;
+        /* Alinea ambos desde la parte superior */
+        justify-content: center;
+        /* Centra el conjunto en el medio */
+    }
+
+    #mensaje {
+        flex: 1 1 55%;
+        /* Texto ocupa el 55% del ancho */
+    }
+
+    .imagen-derecha {
+        flex: 1 1 35%;
+        /* Imagen ocupa el 35% */
+        width: auto;
+        /* Ajuste automático según proporción */
+        max-width: 300px;
+        /* Tamaño máximo controlado */
+        margin-left: 15px;
+        /* Separación del texto */
+    }
+}
+
+
 /* ====== Animaciones ====== */
 @keyframes blink {
 
