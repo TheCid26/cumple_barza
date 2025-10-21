@@ -1,5 +1,5 @@
 // --- MENSAJE CON EFECTO MÁQUINA DE ESCRIBIR ---
-const mensaje = `💙❤️ Hoy es un día especial, un día de alegría y pasión.<br><br>
+const mensaje = `💙❤️ Hoy es un día especial, un día de alegría y pasión.<br>
     Que la fuerza del Barça te acompañe en este nuevo año de vida. ⚽<br>
     Sigue soñando, sigue ganando... ¡como el más grande del mundo! 🌟<br><br>
     <b>Visca el Barça, y visca tú 🎂🔥</b>💙❤️`;
