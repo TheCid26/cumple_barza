@@ -1,8 +1,9 @@
 // --- MENSAJE CON EFECTO MÁQUINA DE ESCRIBIR ---
-const mensaje = `💙❤️ Hoy es un día especial, un día de alegría y pasión.<br>
-    Que la fuerza del Barça te acompañe en este nuevo año de vida. ⚽<br>
-    Sigue soñando, sigue ganando... ¡como el más grande del mundo! 🌟<br><br>
-    <b>Visca el Barça, y visca tú 🎂🔥</b>💙❤️`;
+const mensaje = `💙❤️ ¡Feliz Cumpleaños, hermano de mi alma!🎉 .<br>    
+Que este nuevo año te traiga muchas alegrías y goles de felicidad (al estilo de Messi 😎).
+Eres un gran hermano, hijo y tío... ¡Te mereces lo mejor en la vida! 💪🎂<br>
+    Te amo mucho y ya sabes... 🌟<br>
+    <b> Siempre contarás con tu hermana favorita 😜❤️</b>💙❤️`;
 
 const contenedor = document.getElementById('mensaje');
 let i = 0;
